@@ -50,8 +50,9 @@ if ( ! class_exists( 'YWCES_Coupon_Mail' ) ) {
 			$this->customer_email = true;
 			$this->description    = __( 'YITH WooCommerce Coupon Email System offers an automatic way to send a coupon to your users according to specific events.', 'yith-woocommerce-coupon-email-system' );
 			$this->title          = __( 'Coupon Email System', 'yith-woocommerce-coupon-email-system' );
-			$this->template_html  = '/emails/coupon-email.php';
-			$this->template_plain = '/emails/plain/coupon-email.php';
+			$this->template_base  = YWCES_TEMPLATE_PATH . '/';
+			$this->template_html  = 'emails/coupon-email.php';
+			$this->template_plain = 'emails/plain/coupon-email.php';
 			$this->enabled        = 'yes';
 
 			parent::__construct();
@@ -203,7 +204,7 @@ if ( ! class_exists( 'YWCES_Coupon_Mail' ) ) {
 				'sent_to_admin' => false,
 				'plain_text'    => false,
 				'email'         => $this,
-			), '', YWCES_TEMPLATE_PATH );
+			), false, $this->template_base );
 
 			return ob_get_clean();
 
@@ -226,7 +227,7 @@ if ( ! class_exists( 'YWCES_Coupon_Mail' ) ) {
 				'sent_to_admin' => false,
 				'plain_text'    => true,
 				'email'         => $this,
-			), '', YWCES_TEMPLATE_PATH );
+			), false, $this->template_base );
 
 			return ob_get_clean();
 
@@ -259,39 +260,6 @@ if ( ! class_exists( 'YWCES_Coupon_Mail' ) ) {
 		}
 
 		/**
-		 * Admin Panel Options Processing - Saves the options to the DB
-		 *
-		 * @since   1.0.0
-		 * @return  boolean|null
-		 * @author  Alberto Ruggiero
-		 */
-		public function process_admin_options() {
-
-			$tab_name = ( defined( 'YWCES_PREMIUM' ) ? 'premium-general' : 'general' );
-
-			woocommerce_update_options( $this->form_fields[ $tab_name ] );
-
-		}
-
-		/**
-		 * Setup email settings screen.
-		 *
-		 * @since   1.0.0
-		 * @return  string
-		 * @author  Alberto Ruggiero
-		 */
-		public function admin_options() {
-			$tab_name = ( defined( 'YWCES_PREMIUM' ) ? 'premium-general' : 'general' );
-
-			?>
-            <table class="form-table">
-				<?php woocommerce_admin_fields( $this->form_fields[ $tab_name ] ); ?>
-            </table>
-			<?php
-
-		}
-
-		/**
 		 * Initialise Settings Form Fields
 		 *
 		 * @since   1.0.0
@@ -299,10 +267,6 @@ if ( ! class_exists( 'YWCES_Coupon_Mail' ) ) {
 		 * @author  Alberto Ruggiero
 		 */
 		public function init_form_fields() {
-
-			$tab_name = ( defined( 'YWCES_PREMIUM' ) ? 'premium-general' : 'general' );
-
-			$this->form_fields = include( YWCES_DIR . '/plugin-options/' . $tab_name . '-options.php' );
 
 		}
 

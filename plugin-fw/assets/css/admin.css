@@ -34,11 +34,23 @@
 }
 
 .notice-yith{
+    margin-left: 0;
     border-left-color: #acc327;
 }
 
 .notice-yith.notice-alt{
     background-color: #ecf7ed;
+}
+
+.yith-promo-banner-image-link{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.yith-promo-banner-image{
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 /*-----------------------

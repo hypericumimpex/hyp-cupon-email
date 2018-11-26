@@ -43,7 +43,7 @@ if ( ! class_exists( 'YWCES_Emails' ) ) {
 
 			if ( is_null( self::$instance ) ) {
 
-				self::$instance = new self( $_REQUEST );
+				self::$instance = new self();
 
 			}
 
@@ -55,7 +55,7 @@ if ( ! class_exists( 'YWCES_Emails' ) ) {
 		 * Constructor
 		 *
 		 * @since   1.0.0
-		 * @return  mixed
+		 * @return  void
 		 * @author  Alberto Ruggiero
 		 */
 		public function __construct() {
@@ -155,6 +155,9 @@ if ( ! class_exists( 'YWCES_Emails' ) ) {
 		public function get_mail_body( $type, $coupon_code, $first_name, $last_name, $user_email, $args = array(), $vendor_id = '' ) {
 			$lang = '';
 
+			$unsubscribe_text = apply_filters( 'ywces_unsubscribe_link_text', __( 'If you don\'t want to receive these emails click %s here %s', 'yith-woocommerce-coupon-email-system' ) );
+			$unsubscribe_url  = ( wc_get_account_endpoint_url( 'edit-account' ) );
+
 			if ( class_exists( 'SitePress' ) ) {
 
 				$order_id = 0;
@@ -204,6 +207,7 @@ if ( ! class_exists( 'YWCES_Emails' ) ) {
 				'{customer_last_name}' => $last_name,
 				'{customer_email}'     => $user_email,
 				'{vendor_name}'        => apply_filters( 'ywces_get_vendor_name', '', $vendor_id ),
+				'{unsubscribe_link}'   => sprintf( $unsubscribe_text, '<a href="' . $unsubscribe_url . '">', '</a>' )
 			);
 
 			switch ( $type ) {

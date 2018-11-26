@@ -34,7 +34,7 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 			if ( is_null( self::$instance ) ) {
 
-				self::$instance = new self( $_REQUEST );
+				self::$instance = new self();
 
 			}
 
@@ -69,7 +69,7 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 		 * Constructor
 		 *
 		 * @since   1.0.5
-		 * @return  mixed
+		 * @return  void
 		 * @author  Alberto Ruggiero
 		 */
 		public function __construct() {
@@ -85,7 +85,6 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 			add_filter( 'woocommerce_screen_ids', array( $this, 'add_screen_ids' ) );
 			add_action( 'woocommerce_created_customer', array( $this, 'ywces_user_registration_vendor' ), 11, 2 );
-			//add_action( 'woocommerce_order_status_completed', array( $this, 'ywces_user_purchase_vendor' ), 11 );
 			add_action( 'woocommerce_order_status_changed', array( $this, 'ywces_user_purchase_vendor' ), 10, 3 );
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
@@ -550,6 +549,10 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 		 */
 		public function ywces_user_registration_vendor( $customer_id, $new_customer_data ) {
 
+			if ( get_option( 'ywces_refuse_coupon' ) == 'yes' && get_user_meta( $customer_id, 'ywces_receive_coupons', true ) == 'yes' ) {
+				return;
+			}
+
 			foreach ( $this->active_vendors as $curr_vendor ) {
 
 				$coupon_code = get_option( 'ywces_coupon_register_' . $curr_vendor->id );
@@ -560,10 +563,16 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 					$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'register', $coupon_code, array(), false, false, $curr_vendor->id );
 
+					if ( ! $email_result ) {
+						YITH_WCES()->write_log( array(
+							                        'coupon_code' => $coupon_code,
+							                        'type'        => 'register'
+						                        ) );
+					}
+
 				}
 
 			}
-
 
 		}
 
@@ -615,6 +624,10 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 		 */
 		public function process_vendor_coupon( $vendor_id, WC_Order $order, $customer_id, $order_count, $money_spent ) {
 
+			if ( get_option( 'ywces_refuse_coupon' ) == 'yes' && get_user_meta( $customer_id, 'ywces_receive_coupons', true ) == 'yes' ) {
+				return;
+			}
+
 			//Set the user to receive again a coupon after XX days from his last purchase
 			update_user_meta( $customer_id, '_last_purchase_coupon_sent_vendor_' . $vendor_id, 'no' );
 
@@ -640,6 +653,12 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 							$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'first_purchase', $coupon_code, $args, false, false, $vendor_id );
 
+							if ( ! $email_result ) {
+								YITH_WCES()->write_log( array(
+									                        'coupon_code' => $coupon_code,
+									                        'type'        => 'first_purchase'
+								                        ) );
+							}
 						}
 
 						return;
@@ -667,6 +686,13 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 							YITH_WCES()->bind_coupon( $coupon_code, $billing_email );
 
 							$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'purchases', $coupon_code, $args, false, false, $vendor_id );
+
+							if ( ! $email_result ) {
+								YITH_WCES()->write_log( array(
+									                        'coupon_code' => $coupon_code,
+									                        'type'        => 'purchases'
+								                        ) );
+							}
 
 						}
 
@@ -696,6 +722,13 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 							YITH_WCES()->bind_coupon( $coupon_code, $billing_email );
 
 							$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'spending', $coupon_code, $args, false, false, $vendor_id );
+
+							if ( ! $email_result ) {
+								YITH_WCES()->write_log( array(
+									                        'coupon_code' => $coupon_code,
+									                        'type'        => 'spending'
+								                        ) );
+							}
 
 						}
 
@@ -738,6 +771,13 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 						$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'product_purchasing', $coupon_code, $args, false, false, $vendor_id );
 
+						if ( ! $email_result ) {
+							YITH_WCES()->write_log( array(
+								                        'coupon_code' => $coupon_code,
+								                        'type'        => 'product_purchasing'
+							                        ) );
+						}
+
 					}
 
 				}
@@ -765,6 +805,10 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 						foreach ( $users as $customer_id ) {
 
+							if ( get_option( 'ywces_refuse_coupon' ) == 'yes' && get_user_meta( $customer_id, 'ywces_receive_coupons', true ) == 'yes' ) {
+								continue;
+							}
+
 							$coupon_code = YITH_WCES()->create_coupon( $customer_id, 'last_purchase', array(), $vendor->id );
 
 							$args = array(
@@ -773,9 +817,16 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 							$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'last_purchase', $coupon_code, $args, false, false, $vendor->id );
 
-							//Set the user to not receive another coupon until he does a new purchase
-							update_user_meta( $customer_id, '_last_purchase_coupon_sent_vendor_' . $vendor->id, 'yes' );
+							if ( ! $email_result ) {
+								YITH_WCES()->write_log( array(
+									                        'coupon_code' => $coupon_code,
+									                        'type'        => 'last_purchase'
+								                        ) );
+							} else {
+								//Set the user to not receive another coupon until he does a new purchase
+								update_user_meta( $customer_id, '_last_purchase_coupon_sent_vendor_' . $vendor->id, 'yes' );
 
+							}
 						}
 
 					}
@@ -790,9 +841,20 @@ if ( ! class_exists( 'YWCES_MultiVendor' ) ) {
 
 						foreach ( $users as $customer_id ) {
 
+							if ( get_option( 'ywces_refuse_coupon' ) == 'yes' && get_user_meta( $customer_id, 'ywces_receive_coupons', true ) == 'yes' ) {
+								continue;
+							}
+
 							$coupon_code = YITH_WCES()->create_coupon( $customer_id, 'birthday', array(), $vendor->id );
 
 							$email_result = YWCES_Emails()->prepare_coupon_mail( $customer_id, 'birthday', $coupon_code, array(), false, false, $vendor->id );
+
+							if ( ! $email_result ) {
+								YITH_WCES()->write_log( array(
+									                        'coupon_code' => $coupon_code,
+									                        'type'        => 'birthday'
+								                        ) );
+							}
 
 						}
 

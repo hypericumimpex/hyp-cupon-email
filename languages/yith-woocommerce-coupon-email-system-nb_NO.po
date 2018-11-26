@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Coupon Email System Premium v1.1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-23 16:01+0200\n"
-"PO-Revision-Date: 2016-08-23 16:01+0200\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/init\n"
+"POT-Creation-Date: 2018-11-13 15:03:53+00:00\n"
+"PO-Revision-Date: 2018-11-13 16:06+0100\n"
 "Last-Translator: rune <rune@arctic-fritid.no>\n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -21,17 +21,72 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: plugin-fw\n"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:256
+#: class.yith-wc-coupon-email-system.php:323
+msgid "General Settings"
+msgstr "Generelle innstillinger"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:326
+msgid "Vendors Settings"
+msgstr "Leverandør innstillinger"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:330
+#: templates/admin/acceptance-table.php:196
+#, fuzzy
+#| msgid "Coupon settings"
+msgid "Coupons Acceptance"
+msgstr "Kuponginnstillinger"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:333
+#: plugin-options/mandrill-options.php:18
+msgid "Mandrill Settings"
+msgstr "Mandrill innstillinger"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:334
+#: includes/class-ywces-multivendor.php:117
+msgid "How To"
+msgstr "Hvordan"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:339
+#: class.yith-wc-coupon-email-system.php:835
+#: includes/class-ywces-coupon-email.php:52
+#: includes/class-ywces-multivendor.php:123 includes/functions.ywces.php:30
+#: includes/functions.ywces.php:86
+msgid "Coupon Email System"
+msgstr "Kupong e-post system"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:382
+#: templates/admin/class-ywces-custom-send.php:99
+msgid "Sending test email..."
+msgstr "Sender testmelding..."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:383
+msgid "Test email has been sent successfully!"
+msgstr "Testmeldingen ble sendt!"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:384
+msgid "Please insert a valid email address"
+msgstr "Vennligst skriv inn en gyldig e-postadresse"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:385
 msgid "You need to set at least a threshold to send a test email"
 msgstr "Du må angi minst èn terskelverdi for å kunne sende en testmelding"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:257
+#: class.yith-wc-coupon-email-system.php:386
 msgid "Please select at least a product"
 msgstr "Vennligst, velg minst ett produkt"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:258
+#: class.yith-wc-coupon-email-system.php:387
 msgid ""
 "You need to select at least the amount/percentage of a coupon to send it in "
 "a test email"
@@ -40,216 +95,12 @@ msgstr ""
 "en testmelding"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:259
+#: class.yith-wc-coupon-email-system.php:388
 msgid "Please specify the number of days"
 msgstr "Vennligst spesifiser antall dager"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:288
-msgid "Please enter Mandrill API Key for YITH WooCommerce Coupon Email System"
-msgstr ""
-"Vennligst skriv inn din Mandrill API-nøkkel for \"Kupong e-post systemet\""
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:311
-#: includes/class-ywces-multivendor.php:201
-msgid "You need to select a coupon to send one for a new first purchase."
-msgstr "Du må velge en rabattkupong for utsendelse ved første kjøp."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:321
-#: includes/class-ywces-multivendor.php:211
-msgid ""
-"You need to set a threshold to send a coupon once a user reaches a specific "
-"number of purchases."
-msgstr ""
-"Du må angi en terskelverdi for å sende en rabattkupong når en bruker når et "
-"bestemt antall kjøp."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:339
-#: includes/class-ywces-multivendor.php:231
-msgid ""
-"You need to set a coupon for each threshold to send one when users reach a "
-"specific number of purchases."
-msgstr ""
-"Du må velge en rabattkupong for hver terskel, sendes når brukerne når et "
-"bestemt antall kjøp."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:350
-#: includes/class-ywces-multivendor.php:243
-msgid ""
-"You need to set a threshold to send a coupon once a user reaches a specific "
-"spent amount."
-msgstr ""
-"Du må angi en terskelverdi for å sende en rabattkupong når en bruker når et "
-"bestemt beløp brukt til kjøp."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:369
-#: includes/class-ywces-multivendor.php:263
-msgid ""
-"You need to set a coupon for each threshold to send one when users reach a "
-"specific spent amount."
-msgstr ""
-"Du må velge en rabattkupong for hver terskel, sendes når brukerne når et "
-"bestemt beløp brukt til kjøp."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:380
-#: includes/class-ywces-multivendor.php:275
-msgid ""
-"You need to select at least one product to send a coupon once purchased."
-msgstr ""
-"Du må velge minst ett produkt for å sende en rabattkupong når produktet er "
-"kjøpt."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:388
-#: includes/class-ywces-multivendor.php:283
-msgid ""
-"You need to select at least the amount/percentage of a coupon to send it for "
-"the purchase of a specific product."
-msgstr ""
-"Du må angi beløp/prosentsats av en rabattkupong for å kunne sende kupongen i "
-"henhold til et spesifikt produkt."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:400
-#: includes/class-ywces-multivendor.php:295
-msgid ""
-"You need to select at least the amount/percentage of a coupon to send it for "
-"the birthday of a user."
-msgstr ""
-"Du må angi beløp/prosentsats av en rabattkupong for å kunne sende kupongen i "
-"henhold til en brukers fødselsdag."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:412
-#: includes/class-ywces-multivendor.php:307
-msgid ""
-"You need to select at least the amount/percentage of a coupon to send it "
-"after a specific number of days following the last order."
-msgstr ""
-"Du må angi beløp/prosentsats av en rabattkupong for å kunne sende kupongen i "
-"henhold til et bestemt antall dager etter den siste ordren."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:608
-#: plugin-options/premium-general-options.php:494
-#: plugin-options/vendor/vendor-options.php:452
-msgid "On a specific number of days from the last purchase"
-msgstr "På et bestemt antall dager fra siste kjøp"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:612
-#: plugin-options/premium-general-options.php:427
-#: plugin-options/vendor/vendor-options.php:382
-msgid "On customer birthday"
-msgstr "På kunders fødselsdag"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:616
-#: plugin-options/premium-general-options.php:349
-#: plugin-options/vendor/vendor-options.php:301
-msgid "On specific product purchase"
-msgstr "På spesifikt produktkjøp"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:930
-#: class.yith-wc-coupon-email-system.php:220
-#: class.yith-wc-coupon-email-system.php:221
-#: includes/class-ywces-coupon-email.php:52
-#: includes/class-ywces-multivendor.php:124
-#: includes/class-ywces-multivendor.php:125
-msgid "Coupon Email System"
-msgstr "Kupong e-post system"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:934
-#: class.yith-wc-coupon-email-system-premium.php:1059
-#: class.yith-wc-coupon-email-system-premium.php:1097
-msgid "Birth date"
-msgstr "Fødselsdato"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:994
-msgid "YYYY-MM-DD"
-msgstr "ÅÅÅÅ-MM-DD"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:995
-msgid "YYYY/MM/DD"
-msgstr "ÅÅÅÅ/MM/DD"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:996
-msgid "MM-DD-YYYY"
-msgstr "MM-DD-ÅÅÅÅ"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:997
-msgid "MM/DD/YYYY"
-msgstr "MM/DD/ÅÅÅÅ"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:998
-msgid "DD-MM-YYYY"
-msgstr "DD-MM-ÅÅÅÅ"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system-premium.php:999
-msgid "DD/MM/YYYY"
-msgstr "DD/MM/ÅÅÅÅ"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:200
-#: class.yith-wc-coupon-email-system.php:210
-msgid "General Settings"
-msgstr "Generelle innstillinger"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:204
-msgid "Vendors Settings"
-msgstr "Leverandør innstillinger"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:208
-#: plugin-options/mandrill-options.php:18
-msgid "Mandrill Settings"
-msgstr "Mandrill innstillinger"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:211
-#: class.yith-wc-coupon-email-system.php:731
-msgid "Premium Version"
-msgstr "Premium versjon"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:214
-#: includes/class-ywces-multivendor.php:118
-msgid "How To"
-msgstr "Hvordan"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:252
-#: templates/admin/class-ywces-custom-send.php:99
-msgid "Sending test email..."
-msgstr "Sender testmelding..."
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:253
-msgid "Test email has been sent successfully!"
-msgstr "Testmeldingen ble sendt!"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:254
-msgid "Please insert a valid email address"
-msgstr "Vennligst skriv inn en gyldig e-postadresse"
-
-# @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:275
+#: class.yith-wc-coupon-email-system.php:408
 msgid ""
 "In order to use some of the features of YITH WooCommerce Coupon Email System "
 "you need to create at least one coupon"
@@ -258,113 +109,253 @@ msgstr ""
 "opprette minst én kupong"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:375
+#: class.yith-wc-coupon-email-system.php:412
+msgid "Please enter Mandrill API Key for YITH WooCommerce Coupon Email System"
+msgstr ""
+"Vennligst skriv inn din Mandrill API-nøkkel for \"Kupong e-post systemet\""
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:419
+#: includes/class-ywces-multivendor.php:192
+msgid "You need to select a coupon to send one for a new user registration."
+msgstr "Du må velge en rabattkupong for utsendelse ved ny brukerregistrering."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:429
+#: includes/class-ywces-multivendor.php:202
+msgid "You need to select a coupon to send one for a new first purchase."
+msgstr "Du må velge en rabattkupong for utsendelse ved første kjøp."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:439
+#: includes/class-ywces-multivendor.php:212
+msgid ""
+"You need to set a threshold to send a coupon once a user reaches a specific "
+"number of purchases."
+msgstr ""
+"Du må angi en terskelverdi for å sende en rabattkupong når en bruker når et "
+"bestemt antall kjøp."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:457
+#: includes/class-ywces-multivendor.php:232
+msgid ""
+"You need to set a coupon for each threshold to send one when users reach a "
+"specific number of purchases."
+msgstr ""
+"Du må velge en rabattkupong for hver terskel, sendes når brukerne når et "
+"bestemt antall kjøp."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:468
+#: includes/class-ywces-multivendor.php:244
+msgid ""
+"You need to set a threshold to send a coupon once a user reaches a specific "
+"spent amount."
+msgstr ""
+"Du må angi en terskelverdi for å sende en rabattkupong når en bruker når et "
+"bestemt beløp brukt til kjøp."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:487
+#: includes/class-ywces-multivendor.php:264
+msgid ""
+"You need to set a coupon for each threshold to send one when users reach a "
+"specific spent amount."
+msgstr ""
+"Du må velge en rabattkupong for hver terskel, sendes når brukerne når et "
+"bestemt beløp brukt til kjøp."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:498
+#: includes/class-ywces-multivendor.php:276
+msgid ""
+"You need to select at least one product to send a coupon once purchased."
+msgstr ""
+"Du må velge minst ett produkt for å sende en rabattkupong når produktet er "
+"kjøpt."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:506
+#: includes/class-ywces-multivendor.php:284
+msgid ""
+"You need to select at least the amount/percentage of a coupon to send it for "
+"the purchase of a specific product."
+msgstr ""
+"Du må angi beløp/prosentsats av en rabattkupong for å kunne sende kupongen i "
+"henhold til et spesifikt produkt."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:518
+#: includes/class-ywces-multivendor.php:296
+msgid ""
+"You need to select at least the amount/percentage of a coupon to send it for "
+"the birthday of a user."
+msgstr ""
+"Du må angi beløp/prosentsats av en rabattkupong for å kunne sende kupongen i "
+"henhold til en brukers fødselsdag."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:530
+#: includes/class-ywces-multivendor.php:308
+msgid ""
+"You need to select at least the amount/percentage of a coupon to send it "
+"after a specific number of days following the last order."
+msgstr ""
+"Du må angi beløp/prosentsats av en rabattkupong for å kunne sende kupongen i "
+"henhold til et bestemt antall dager etter den siste ordren."
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:695
 msgid "Placeholder reference"
 msgstr "Plassholder referanse"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:384
+#: class.yith-wc-coupon-email-system.php:704
 msgid ""
 "Replaced with the description of the given coupon. This placeholder must be "
 "included."
 msgstr "Beskrivelse av rabattkupongen. Denne plassholder må inkluderes."
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:392
+#: class.yith-wc-coupon-email-system.php:712
 msgid "Replaced with the site title"
 msgstr "Nettstedets tittel"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:400
+#: class.yith-wc-coupon-email-system.php:720
 msgid "Replaced with the customer's name"
 msgstr "Kundens navn"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:408
+#: class.yith-wc-coupon-email-system.php:728
 msgid "Replaced with the customer's last name"
 msgstr "Kundens etternavn"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:416
+#: class.yith-wc-coupon-email-system.php:736
 msgid "Replaced with the customer's email"
 msgstr "Kundens e-postadresse"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:424
+#: class.yith-wc-coupon-email-system.php:744
 msgid "Replaced with the date of the order"
 msgstr "Dato for ordre"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:435
+#: class.yith-wc-coupon-email-system.php:755
 msgid "Replaced with the number of purchases"
 msgstr "Antall kjøp"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:443
+#: class.yith-wc-coupon-email-system.php:763
 msgid "Replaced with the amount of money spent by the customer"
 msgstr "Hvor mye penger som er brukt av kunden"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:451
+#: class.yith-wc-coupon-email-system.php:771
 msgid "Replaced with the spent amount of money"
 msgstr "Hvor mye penger som er brukt"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:459
+#: class.yith-wc-coupon-email-system.php:779
 msgid "Replaced with the number of days since last purchase"
 msgstr "Antall dager siden siste kjøp"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:467
+#: class.yith-wc-coupon-email-system.php:787
 msgid "Replaced with the name of a purchased product"
 msgstr "Navn på det kjøpte produktet"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:477
+#: class.yith-wc-coupon-email-system.php:797
 msgid "Replaced with the name of the vendor"
 msgstr "Navn på leverandøren"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:534
-#: includes/class-ywces-multivendor.php:191
-msgid "You need to select a coupon to send one for a new user registration."
-msgstr "Du må velge en rabattkupong for utsendelse ved ny brukerregistrering."
+#: class.yith-wc-coupon-email-system.php:839
+#: class.yith-wc-coupon-email-system.php:1716
+#: class.yith-wc-coupon-email-system.php:1768
+msgid "Birth date"
+msgstr "Fødselsdato"
 
 # @ yith-woocommerce-coupon-email-system
-# @ yith-plugin-fw
-#: class.yith-wc-coupon-email-system.php:728
-#: includes/class-ywces-multivendor.php:117
-msgid "Settings"
-msgstr "Innstillinger"
+#: class.yith-wc-coupon-email-system.php:1455
+#: plugin-options/general-options.php:511
+#: plugin-options/vendor/vendor-options.php:452
+msgid "On a specific number of days from the last purchase"
+msgstr "På et bestemt antall dager fra siste kjøp"
 
 # @ yith-woocommerce-coupon-email-system
-#: class.yith-wc-coupon-email-system.php:758
-msgid "Plugin Documentation"
-msgstr "Plugin dokumentasjon"
+#: class.yith-wc-coupon-email-system.php:1459
+#: plugin-options/general-options.php:443
+#: plugin-options/vendor/vendor-options.php:382
+msgid "On customer birthday"
+msgstr "På kunders fødselsdag"
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-ajax-premium.php:84
-#, php-format
+#: class.yith-wc-coupon-email-system.php:1463
+#: plugin-options/general-options.php:364
+#: plugin-options/vendor/vendor-options.php:301
+msgid "On specific product purchase"
+msgstr "På spesifikt produktkjøp"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:1629
+msgid "YYYY-MM-DD"
+msgstr "ÅÅÅÅ-MM-DD"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:1630
+msgid "YYYY/MM/DD"
+msgstr "ÅÅÅÅ/MM/DD"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:1631
+msgid "MM-DD-YYYY"
+msgstr "MM-DD-ÅÅÅÅ"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:1632
+msgid "MM/DD/YYYY"
+msgstr "MM/DD/ÅÅÅÅ"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:1633
+msgid "DD-MM-YYYY"
+msgstr "DD-MM-ÅÅÅÅ"
+
+# @ yith-woocommerce-coupon-email-system
+#: class.yith-wc-coupon-email-system.php:1634
+msgid "DD/MM/YYYY"
+msgstr "DD/MM/ÅÅÅÅ"
+
+#: class.yith-wc-coupon-email-system.php:1868
+#: class.yith-wc-coupon-email-system.php:1906
+msgid "I accept to receive coupons via email"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#: includes/class-ywces-ajax.php:114
+msgid "There was an error while sending the email"
+msgstr "Det oppstod en feil under sending av e-posten"
+
+# @ yith-woocommerce-coupon-email-system
+#: includes/class-ywces-ajax.php:124
+msgid "Coupon not valid"
+msgstr "Rabattkupongen er ikke gyldig"
+
+# @ yith-woocommerce-coupon-email-system
+#: includes/class-ywces-ajax.php:155
 msgid "Operation completed. %d coupon trashed."
 msgid_plural "Operation completed. %d coupons trashed."
 msgstr[0] "Oppdraget fullført. %d kupong ble slettet."
 msgstr[1] "Oppdraget fullført. %d kuponger ble slettet."
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-ajax-premium.php:89
-#, php-format
+#: includes/class-ywces-ajax.php:160
 msgid "An error occurred: %s"
 msgstr "Det oppstod en feil: %s"
-
-# @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-ajax.php:111
-msgid "There was an error while sending the email"
-msgstr "Det oppstod en feil under sending av e-posten"
-
-# @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-ajax.php:123
-msgid "Coupon not valid"
-msgstr "Rabattkupongen er ikke gyldig"
 
 # @ yith-woocommerce-coupon-email-system
 #: includes/class-ywces-coupon-email.php:51
@@ -375,80 +366,123 @@ msgstr ""
 "YITH WooCommerce Kupong e-post system sender ut rabattkuponger til dine "
 "kunder automatisk og i henhold til forhåndsdefinerte hendelser."
 
+#: includes/class-ywces-emails.php:158
+msgid "If you don't want to receive these emails click %s here %s"
+msgstr ""
+
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:341
+#: includes/class-ywces-emails.php:383
 msgid "Coupon code: "
 msgstr "Rabattkupong: "
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:354
-#, php-format
+#: includes/class-ywces-emails.php:396
 msgid "Coupon amount: %s%s off"
 msgstr "Rabattkupongens verdi: %s%s"
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:356
+#: includes/class-ywces-emails.php:398
 msgid "Free shipping"
 msgstr "Fraktfritt levert"
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:362
-#, php-format
+#: includes/class-ywces-emails.php:404
 msgid "Valid for a minimum purchase of %s"
 msgstr "Gyldig for et minimum kjøp på %s"
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:365
-#, php-format
+#: includes/class-ywces-emails.php:407
 msgid "Valid for a maximum purchase of %s"
 msgstr "Gyldig for et maksimum kjøp på %s"
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:368
-#, php-format
+#: includes/class-ywces-emails.php:410
 msgid "Valid for a minimum purchase of %s and a maximum of %s"
 msgstr "Gyldig for et minimum kjøp på %s og et maksimum kjøp på %s"
 
 # @ default
-#: includes/class-ywces-emails.php:375
+#: includes/class-ywces-emails.php:417
 msgid "Valid for:"
 msgstr ""
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:378 includes/class-ywces-emails.php:395
-#, php-format
+#: includes/class-ywces-emails.php:420 includes/class-ywces-emails.php:437
 msgid "Following products: %s"
 msgstr "Følgende produkter: %s"
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:383 includes/class-ywces-emails.php:400
-#, php-format
+#: includes/class-ywces-emails.php:425 includes/class-ywces-emails.php:442
 msgid "Products of the following categories: %s"
 msgstr "Produkter i følgende kategorier: %s"
 
 # @ default
-#: includes/class-ywces-emails.php:392
+#: includes/class-ywces-emails.php:434
 msgid "Not valid for:"
 msgstr ""
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:408
+#: includes/class-ywces-emails.php:450
 msgid "This coupon cannot be used in conjunction with other coupons"
 msgstr "Denne rabattkupongen kan ikke brukes sammen med andre rabattkuponger."
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:412
+#: includes/class-ywces-emails.php:454
 msgid "This coupon will not apply to items on sale"
 msgstr "Denne rabattkupongen gjelder ikke tilbudsvarer."
 
 # @ yith-woocommerce-coupon-email-system
-#: includes/class-ywces-emails.php:421
-#, php-format
+#: includes/class-ywces-emails.php:464
 msgid "Expiration date: %s"
 msgstr "Rabattkupongen er gyldig til: %s"
 
 # @ yith-woocommerce-coupon-email-system
-#: init.php:23
+# @ yith-plugin-fw
+#: includes/class-ywces-multivendor.php:116
+msgid "Settings"
+msgstr "Innstillinger"
+
+# @ yith-woocommerce-coupon-email-system
+#: includes/class-ywces-privacy.php:18
+#, fuzzy
+#| msgid "Enable YITH WooCommerce Coupon Email System"
+msgctxt "Privacy Policy Content"
+msgid "YITH WooCommerce Coupon Email System"
+msgstr "Aktiver \"Kupong e-post system\""
+
+#: includes/class-ywces-privacy.php:30
+msgctxt "Privacy Policy Content"
+msgid ""
+"During the checkout process, customers can give their consent to receive "
+"coupons. When accepting, they will receive coupons according to the events/"
+"thresholds previously set by the administrator. Customers can revoke their "
+"consent from My Account section at any time."
+msgstr ""
+
+#: includes/class-ywces-privacy.php:40
+msgctxt "Privacy Policy Content"
+msgid ""
+"Members of our team have access to the information you provide us. For "
+"example, both Administrators and Shop Managers can access to the list of all "
+"customers that want to receive coupons"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#: includes/functions.ywces.php:56
+#, fuzzy
+#| msgid "Coupon Email System settings"
+msgid "Coupon Email System Status"
+msgstr "\"Kupong e-post system\" innstillinger"
+
+#: includes/functions.ywces.php:60
+msgid "Acceptance"
+msgstr ""
+
+#: includes/functions.ywces.php:61
+msgid "This customer has given consent to receive coupons"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#: init.php:25
 msgid ""
 "YITH WooCommerce Coupon Email System is enabled but not effective. It "
 "requires WooCommerce in order to work."
@@ -458,7 +492,6 @@ msgstr ""
 
 # @ yith-woocommerce-coupon-email-system
 #: plugin-options/admin-vendor-options.php:21
-#, php-format
 msgid ""
 "Coupon management must be enabled to make YITH WooCommerce Coupon Email "
 "System work correctly for vendors. %s Enable %s"
@@ -508,77 +541,127 @@ msgstr "Aktiver rabattkupong for XX antall dager siden siste kjøp"
 
 # @ yith-woocommerce-coupon-email-system
 #: plugin-options/general-options.php:20
-#: plugin-options/premium-general-options.php:20
 #: plugin-options/vendor/vendor-options.php:20
 msgid "Allowed placeholders:"
 msgstr "Tillatte plassholdere:"
 
 # @ yith-woocommerce-coupon-email-system
 #: plugin-options/general-options.php:21
-#: plugin-options/premium-general-options.php:21
 #: plugin-options/vendor/vendor-options.php:21
 msgid "More info"
 msgstr "Mer informasjon"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:29
-#: plugin-options/premium-general-options.php:35
+#: plugin-options/general-options.php:36
 #: plugin-options/vendor/vendor-options.php:35
 msgid "Select a coupon"
 msgstr "Velg en kupong"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:36
-#: plugin-options/premium-general-options.php:50
+#: plugin-options/general-options.php:41
+msgid "Use YITH WooCommerce Email Templates"
+msgstr "Bruk de innebygde e-post malene"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:52
 msgid "Coupon Email System settings"
 msgstr "\"Kupong e-post system\" innstillinger"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:40
-#: plugin-options/premium-general-options.php:54
+#: plugin-options/general-options.php:56
 msgid "Enable YITH WooCommerce Coupon Email System"
 msgstr "Aktiver \"Kupong e-post system\""
 
+#: plugin-options/general-options.php:63
+msgid "Allow customers to accept or refuse to receive coupons"
+msgstr ""
+
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:46
-#: plugin-options/premium-general-options.php:67
+#: plugin-options/general-options.php:70
+msgid "Birthday Input Date Format"
+msgstr "Format på fødselsdato"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:77
 msgid "Email type"
 msgstr "E-post format"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:48
-#: plugin-options/premium-general-options.php:69
+#: plugin-options/general-options.php:79
 msgid "Choose which email format to send."
 msgstr "Velg det e-post formatet du ønsker å bruke"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:50
-#: plugin-options/premium-general-options.php:71
+#: plugin-options/general-options.php:81
 msgid "HTML"
 msgstr "HTML"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:51
-#: plugin-options/premium-general-options.php:72
+#: plugin-options/general-options.php:82
 msgid "Plain text"
 msgstr "Ren tekst"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:61
-#: plugin-options/premium-general-options.php:165
-#: plugin-options/vendor/vendor-options.php:108
-msgid "On first purchase"
-msgstr "På første kjøp"
+#: plugin-options/general-options.php:89
+msgid "Email template"
+msgstr "E-post mal"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:68
-#: plugin-options/premium-general-options.php:110
-#: plugin-options/premium-general-options.php:172
-#: plugin-options/premium-general-options.php:234
-#: plugin-options/premium-general-options.php:295
-#: plugin-options/premium-general-options.php:356
-#: plugin-options/premium-general-options.php:434
-#: plugin-options/premium-general-options.php:501
+#: plugin-options/general-options.php:91
+msgid ""
+"Choose which email template to send. Remember to save options before sending "
+"the test email."
+msgstr ""
+"Velg hvilken e-postmal som skal brukes. Husk å lagre alternativene før du "
+"sender en eventuell test e-post."
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:93
+msgid "WooCommerce Template"
+msgstr "WooCommerce standard mal"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:94
+msgid "Template 1"
+msgstr "Mal #1"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:95
+msgid "Template 2"
+msgstr "Mal #2"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:96
+msgid "Template 3"
+msgstr "Mal #3"
+
+# @ yith-woocommerce-review-for-discounts
+#: plugin-options/general-options.php:102
+msgid "Deletion of Expired Coupons"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:104
+msgid ""
+"Delete automatically expired coupons (only those created by this plugin)"
+msgstr ""
+"Sletter utløpte kuponger automatisk (Kun de som er opprettet av denne "
+"plugin)."
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:113
+#: plugin-options/vendor/vendor-options.php:43
+msgid "On user registration"
+msgstr "På brukerregistrering"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:120
+#: plugin-options/general-options.php:184
+#: plugin-options/general-options.php:247
+#: plugin-options/general-options.php:309
+#: plugin-options/general-options.php:371
+#: plugin-options/general-options.php:450
+#: plugin-options/general-options.php:518
 #: plugin-options/vendor/vendor-options.php:50
 #: plugin-options/vendor/vendor-options.php:115
 #: plugin-options/vendor/vendor-options.php:180
@@ -590,32 +673,29 @@ msgid "Enable coupon sending"
 msgstr "Aktiver sending av kupong"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:75
-#: plugin-options/premium-general-options.php:117
-#: plugin-options/premium-general-options.php:179
+#: plugin-options/general-options.php:128
+#: plugin-options/general-options.php:192
 #: plugin-options/vendor/vendor-options.php:57
 #: plugin-options/vendor/vendor-options.php:122
 msgid "Selected Coupon"
 msgstr "Valgt kupong"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:77
-#: plugin-options/premium-general-options.php:119
-#: plugin-options/premium-general-options.php:181
+#: plugin-options/general-options.php:131
+#: plugin-options/general-options.php:194
 #: plugin-options/vendor/vendor-options.php:59
 #: plugin-options/vendor/vendor-options.php:124
 msgid "Choose the coupon to send"
 msgstr "Velg kupongen som skal sendes"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:83
-#: plugin-options/premium-general-options.php:125
-#: plugin-options/premium-general-options.php:187
-#: plugin-options/premium-general-options.php:248
-#: plugin-options/premium-general-options.php:309
-#: plugin-options/premium-general-options.php:388
-#: plugin-options/premium-general-options.php:455
-#: plugin-options/premium-general-options.php:533
+#: plugin-options/general-options.php:137
+#: plugin-options/general-options.php:200
+#: plugin-options/general-options.php:262
+#: plugin-options/general-options.php:324
+#: plugin-options/general-options.php:404
+#: plugin-options/general-options.php:472
+#: plugin-options/general-options.php:551
 #: plugin-options/vendor/vendor-options.php:65
 #: plugin-options/vendor/vendor-options.php:130
 #: plugin-options/vendor/vendor-options.php:194
@@ -627,24 +707,18 @@ msgid "Email subject"
 msgstr "E-post emne"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:87
-#: plugin-options/premium-general-options.php:191
-#: plugin-options/premium-general-options.php:252
-#: plugin-options/premium-general-options.php:313
-#: plugin-options/premium-general-options.php:392
-#: plugin-options/premium-general-options.php:537
-msgid "You have received a coupon from {site_title}"
+#: plugin-options/general-options.php:141
+msgid "You have received a welcome coupon from {site_title}"
 msgstr "Du har mottatt en rabattkupong fra {site_title}"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:94
-#: plugin-options/premium-general-options.php:136
-#: plugin-options/premium-general-options.php:198
-#: plugin-options/premium-general-options.php:259
-#: plugin-options/premium-general-options.php:320
-#: plugin-options/premium-general-options.php:399
-#: plugin-options/premium-general-options.php:466
-#: plugin-options/premium-general-options.php:544
+#: plugin-options/general-options.php:148
+#: plugin-options/general-options.php:211
+#: plugin-options/general-options.php:273
+#: plugin-options/general-options.php:335
+#: plugin-options/general-options.php:415
+#: plugin-options/general-options.php:483
+#: plugin-options/general-options.php:562
 #: plugin-options/vendor/vendor-options.php:76
 #: plugin-options/vendor/vendor-options.php:141
 #: plugin-options/vendor/vendor-options.php:205
@@ -656,8 +730,63 @@ msgid "Email content"
 msgstr "E-post innhold"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:98
-#: plugin-options/premium-general-options.php:202
+#: plugin-options/general-options.php:152
+msgid ""
+"Hi {customer_name},\n"
+"thanks for your the registration on {site_title}!\n"
+"We would like to offer you this coupon as a welcome gift:\n"
+"\n"
+"{coupon_description}\n"
+"\n"
+"See you on our shop,\n"
+"\n"
+"{site_title}."
+msgstr ""
+"Hei {customer_name}!\n"
+"\n"
+"Takk for at du valgte å registrere deg som kunde hos oss!\n"
+"Vi ønsker å tilby deg denne rabattkupongen som en liten velkomstgave:\n"
+"\n"
+"{coupon_description}\n"
+"\n"
+"Med vennlig hilsen,\n"
+"<strong>{site_title}</strong>"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:167
+#: plugin-options/general-options.php:230
+#: plugin-options/general-options.php:292
+#: plugin-options/general-options.php:354
+#: plugin-options/general-options.php:434
+#: plugin-options/general-options.php:502
+#: plugin-options/general-options.php:581
+#: plugin-options/vendor/vendor-options.php:95
+#: plugin-options/vendor/vendor-options.php:160
+#: plugin-options/vendor/vendor-options.php:224
+#: plugin-options/vendor/vendor-options.php:288
+#: plugin-options/vendor/vendor-options.php:370
+#: plugin-options/vendor/vendor-options.php:440
+#: plugin-options/vendor/vendor-options.php:521
+msgid "Test email"
+msgstr "Test e-post"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:177
+#: plugin-options/vendor/vendor-options.php:108
+msgid "On first purchase"
+msgstr "På første kjøp"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:204
+#: plugin-options/general-options.php:266
+#: plugin-options/general-options.php:328
+#: plugin-options/general-options.php:408
+#: plugin-options/general-options.php:555
+msgid "You have received a coupon from {site_title}"
+msgstr "Du har mottatt en rabattkupong fra {site_title}"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/general-options.php:215
 msgid ""
 "Hi {customer_name},\n"
 "thanks for making the first purchase on {order_date} on our shop "
@@ -681,144 +810,19 @@ msgstr ""
 "<strong>{site_title}</strong>"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/general-options.php:113
-#: plugin-options/premium-general-options.php:155
-#: plugin-options/premium-general-options.php:217
-#: plugin-options/premium-general-options.php:278
-#: plugin-options/premium-general-options.php:339
-#: plugin-options/premium-general-options.php:418
-#: plugin-options/premium-general-options.php:485
-#: plugin-options/premium-general-options.php:563
-#: plugin-options/vendor/vendor-options.php:95
-#: plugin-options/vendor/vendor-options.php:160
-#: plugin-options/vendor/vendor-options.php:224
-#: plugin-options/vendor/vendor-options.php:288
-#: plugin-options/vendor/vendor-options.php:370
-#: plugin-options/vendor/vendor-options.php:440
-#: plugin-options/vendor/vendor-options.php:521
-msgid "Test email"
-msgstr "Test e-post"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/mandrill-options.php:22
-msgid "Enable Mandrill"
-msgstr "Aktiver Mandrill"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/mandrill-options.php:24
-msgid "Use Mandrill to send emails"
-msgstr "Bruk Mandrill til å sende e-poster"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/mandrill-options.php:29
-msgid "Mandrill API Key"
-msgstr "Mandrill API-nøkkel"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:40
-msgid "Use YITH WooCommerce Email Templates"
-msgstr "Bruk de innebygde e-post malene"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:60
-msgid "Birthday Input Date Format"
-msgstr "Format på fødselsdato"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:79
-msgid "Email template"
-msgstr "E-post mal"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:81
-msgid ""
-"Choose which email template to send. Remember to save options before sending "
-"the test email."
-msgstr ""
-"Velg hvilken e-postmal som skal brukes. Husk å lagre alternativene før du "
-"sender en eventuell test e-post."
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:83
-msgid "WooCommerce Template"
-msgstr "WooCommerce standard mal"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:84
-msgid "Template 1"
-msgstr "Mal #1"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:85
-msgid "Template 2"
-msgstr "Mal #2"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:86
-msgid "Template 3"
-msgstr "Mal #3"
-
-# @ yith-woocommerce-review-for-discounts
-#: plugin-options/premium-general-options.php:92
-msgid "Deletion of Expired Coupons"
-msgstr ""
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:94
-msgid ""
-"Delete automatically expired coupons (only those created by this plugin)"
-msgstr ""
-"Sletter utløpte kuponger automatisk (Kun de som er opprettet av denne "
-"plugin)."
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:103
-#: plugin-options/vendor/vendor-options.php:43
-msgid "On user registration"
-msgstr "På brukerregistrering"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:129
-msgid "You have received a welcome coupon from {site_title}"
-msgstr "Du har mottatt en rabattkupong fra {site_title}"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:140
-msgid ""
-"Hi {customer_name},\n"
-"thanks for your the registration on {site_title}!\n"
-"We would like to offer you this coupon as a welcome gift:\n"
-"\n"
-"{coupon_description}\n"
-"\n"
-"See you on our shop,\n"
-"\n"
-"{site_title}."
-msgstr ""
-"Hei {customer_name}!\n"
-"\n"
-"Takk for at du valgte å registrere deg som kunde hos oss!\n"
-"Vi ønsker å tilby deg denne rabattkupongen som en liten velkomstgave:\n"
-"\n"
-"{coupon_description}\n"
-"\n"
-"Med vennlig hilsen,\n"
-"<strong>{site_title}</strong>"
-
-# @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:227
+#: plugin-options/general-options.php:240
 #: plugin-options/vendor/vendor-options.php:173
 msgid "On specific order threshold"
 msgstr "På spesifikke ordreterskler"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:241
+#: plugin-options/general-options.php:255
 #: plugin-options/vendor/vendor-options.php:187
 msgid "Order thresholds"
 msgstr "Ordreterskler"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:263
+#: plugin-options/general-options.php:277
 msgid ""
 "Hi {customer_name},\n"
 "with the order made on {order_date}, you have reached {purchases_threshold} "
@@ -843,19 +847,19 @@ msgstr ""
 "<strong>{site_title}</strong>"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:288
+#: plugin-options/general-options.php:302
 #: plugin-options/vendor/vendor-options.php:237
 msgid "On specific spent threshold"
 msgstr "På spesifikke beløpsterskler"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:302
+#: plugin-options/general-options.php:317
 #: plugin-options/vendor/vendor-options.php:251
 msgid "Amount thresholds"
 msgstr "Beløpsterskler"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:324
+#: plugin-options/general-options.php:339
 msgid ""
 "Hi {customer_name},\n"
 "with the order made on {order_date}, you have reached the amount of "
@@ -880,27 +884,27 @@ msgstr ""
 "<strong>{site_title}</strong>"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:362
+#: plugin-options/general-options.php:378
 #: plugin-options/vendor/vendor-options.php:314
 msgid "Target products"
 msgstr "Målprodukter"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:369
+#: plugin-options/general-options.php:385
 #: plugin-options/vendor/vendor-options.php:321
 msgid "Search for a product&hellip;"
 msgstr "Søk i produkter&hellip;"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:370
+#: plugin-options/general-options.php:386
 #: plugin-options/vendor/vendor-options.php:322
 msgid "Products that will cause the sending of the coupon"
 msgstr "Produkter som vil utløse utsendelse av rabattkupong"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:373
-#: plugin-options/premium-general-options.php:440
-#: plugin-options/premium-general-options.php:518
+#: plugin-options/general-options.php:389
+#: plugin-options/general-options.php:457
+#: plugin-options/general-options.php:536
 #: plugin-options/vendor/vendor-options.php:325
 #: plugin-options/vendor/vendor-options.php:395
 #: plugin-options/vendor/vendor-options.php:476
@@ -908,7 +912,7 @@ msgid "Coupon settings"
 msgstr "Kuponginnstillinger"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:403
+#: plugin-options/general-options.php:419
 msgid ""
 "Hi {customer_name},\n"
 "thanks for purchasing the following product with the order made on "
@@ -932,12 +936,12 @@ msgstr ""
 "<strong>{site_title}</strong>"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:459
+#: plugin-options/general-options.php:476
 msgid "Happy birthday from {site_title}"
 msgstr "Gratulere med dagen fra {site_title}"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:470
+#: plugin-options/general-options.php:487
 msgid ""
 "Hi {customer_name},\n"
 "we would like to make you our best wishes for a happy birthday!\n"
@@ -960,13 +964,13 @@ msgstr ""
 "<strong>{site_title}</strong>"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:507
+#: plugin-options/general-options.php:525
 #: plugin-options/vendor/vendor-options.php:465
 msgid "Days to elapse"
 msgstr "Antall dager"
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:509
+#: plugin-options/general-options.php:527
 #: plugin-options/vendor/vendor-options.php:467
 msgid ""
 "The number of days that have to pass after the last order has been set as "
@@ -975,7 +979,7 @@ msgstr ""
 "Antall dager som må passere etter at siste ordren er satt som \"Fullført\""
 
 # @ yith-woocommerce-coupon-email-system
-#: plugin-options/premium-general-options.php:548
+#: plugin-options/general-options.php:566
 msgid ""
 "Hi {customer_name},\n"
 "{days_ago} days have passed since your last order.\n"
@@ -997,6 +1001,21 @@ msgstr ""
 "\n"
 "Med vennlig hilsen,\n"
 "<strong>{site_title}</strong>"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/mandrill-options.php:22
+msgid "Enable Mandrill"
+msgstr "Aktiver Mandrill"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/mandrill-options.php:24
+msgid "Use Mandrill to send emails"
+msgstr "Bruk Mandrill til å sende e-poster"
+
+# @ yith-woocommerce-coupon-email-system
+#: plugin-options/mandrill-options.php:29
+msgid "Mandrill API Key"
+msgstr "Mandrill API-nøkkel"
 
 # @ yith-woocommerce-coupon-email-system
 #: plugin-options/vendor/vendor-options.php:69
@@ -1185,18 +1204,77 @@ msgstr ""
 "Med vennlig hilsen,\n"
 "<strong>{vendor_name}</strong>"
 
+#: templates/admin/acceptance-table.php:80
+msgid "customer"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:81
+msgid "customers"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:103
+msgid "Customer"
+msgstr ""
+
 # @ yith-woocommerce-coupon-email-system
-#: templates/admin/class-ywces-custom-collapse.php:79
+#: templates/admin/acceptance-table.php:104
+#, fuzzy
+#| msgid "Email type"
+msgid "E-mail"
+msgstr "E-post format"
+
+#: templates/admin/acceptance-table.php:126
+#: templates/admin/acceptance-table.php:142
+msgid "Delete"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#: templates/admin/acceptance-table.php:169
+#, fuzzy
+#| msgid "Select a coupon"
+msgid "Select a customer"
+msgstr "Velg en kupong"
+
+#: templates/admin/acceptance-table.php:175
+msgid "1 customer added successfully"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:190
+msgid "Items deleted: %d"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:213
+msgid "Add Customer"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:222
+msgid "Search Customer"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:235
+msgid "Add E-mail"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:242
+msgid "Search Email"
+msgstr ""
+
+#: templates/admin/acceptance-table.php:266
+msgid "Customers"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#: templates/admin/class-ywces-custom-collapse.php:80
 msgid "Click to collapse/expand the table"
 msgstr "Klikk for å kollapse/utvide tabellen"
 
 # @ yith-woocommerce-coupon-email-system
-#: templates/admin/class-ywces-custom-collapse.php:83
+#: templates/admin/class-ywces-custom-collapse.php:84
 msgid "Expand"
 msgstr "Utvide"
 
 # @ yith-woocommerce-coupon-email-system
-#: templates/admin/class-ywces-custom-collapse.php:86
+#: templates/admin/class-ywces-custom-collapse.php:87
 msgid "Collapse"
 msgstr "Kollapse"
 
@@ -1294,3 +1372,42 @@ msgstr "+ Legg til terskel"
 #: templates/admin/class-ywces-custom-table.php:152
 msgid "Remove selected threshold(s)"
 msgstr "Fjern valgte terskel"
+
+# @ yith-woocommerce-coupon-email-system
+#. Plugin Name of the plugin/theme
+#, fuzzy
+#| msgid "Enable YITH WooCommerce Coupon Email System"
+msgid "YITH WooCommerce Coupon Email System Premium"
+msgstr "Aktiver \"Kupong e-post system\""
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"https://yithemes.com/themes/plugins/yith-woocommerce-coupon-email-system/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"<code><strong>YITH WooCommerce Coupon Email System</strong></code> allows "
+"sending one or more coupons based on specific rules to your customers "
+"automatically. You could, for example, send a coupon code to all customers "
+"who register to your store or to those who reach a certain number of orders "
+"in your shop and so on. It's perfect to encourage your users to buy again "
+"and again from you. <a href=\"https://yithemes.com/\" target=\"_blank\">Get "
+"more plugins for your e-commerce shop on <strong>YITH</strong></a>"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "YITH"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://yithemes.com/"
+msgstr ""
+
+# @ yith-woocommerce-coupon-email-system
+#~ msgid "Premium Version"
+#~ msgstr "Premium versjon"
+
+# @ yith-woocommerce-coupon-email-system
+#~ msgid "Plugin Documentation"
+#~ msgstr "Plugin dokumentasjon"
