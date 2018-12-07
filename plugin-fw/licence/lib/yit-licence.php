@@ -360,6 +360,7 @@ if ( !class_exists( 'YIT_Licence' ) ) {
 
 			            case '101':
 			            case '102':
+			            case '104':
 				            unset( $options[ $product[ 'product_id' ]  ] );
 				            break;
 
@@ -468,6 +469,7 @@ if ( !class_exists( 'YIT_Licence' ) ) {
 
                         case '101':
                         case '102':
+	                    case '104':
                             unset( $licence[ $product_id ] );
                             break;
 

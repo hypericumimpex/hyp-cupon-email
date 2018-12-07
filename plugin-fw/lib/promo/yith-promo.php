@@ -17,7 +17,7 @@ add_action( 'admin_enqueue_scripts', 'yith_plugin_fw_notice_dismiss', 20 );
 
 if( ! function_exists( 'yith_plugin_fw_promo_notices' ) ){
 	function yith_plugin_fw_promo_notices(){
-		$base_url                   = apply_filters( 'yith_plugin_fw_promo_base_url', 'https://update.yithemes.com/promo/' );;
+		$base_url                   = apply_filters( 'yith_plugin_fw_promo_base_url', 'https://update.yithemes.com/promo/hotlink-ok' );
 		$xml                        = apply_filters( 'yith_plugin_fw_promo_xml_url', $base_url . 'yith-promo.xml' );
 		$transient                  = "yith_promo_message";
 		$remote_data                = get_site_transient( $transient );

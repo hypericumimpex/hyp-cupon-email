@@ -178,7 +178,6 @@ if ( ! class_exists( 'YITH_WC_Coupon_Email_System' ) ) {
 			}
 
 			add_action( 'woocommerce_order_status_completed', array( $this, 'ywces_user_purchase' ) );
-			add_action( 'ywces_user_purchase_premium', array( $this, 'ywces_user_purchase_premium' ), 10, 5 );
 			add_action( 'ywces_daily_send_mail_job', array( $this, 'ywces_daily_send_mail_job' ) );
 
 			if ( get_option( 'ywces_enable_birthday' ) == 'yes' ) {
@@ -219,12 +218,12 @@ if ( ! class_exists( 'YITH_WC_Coupon_Email_System' ) ) {
 
 			include_once( 'includes/class-ywces-emails.php' );
 			include_once( 'includes/class-ywces-mandrill.php' );
+			include_once( 'includes/functions.ywces.php' );
 
 			if ( is_admin() ) {
 
 				include_once( 'includes/class-yith-custom-table.php' );
 				include_once( 'includes/class-ywces-ajax.php' );
-				include_once( 'includes/functions.ywces.php' );
 				include_once( 'templates/admin/class-ywces-custom-send.php' );
 				include_once( 'templates/admin/class-yith-wc-custom-textarea.php' );
 				include_once( 'templates/admin/class-ywces-custom-table.php' );
